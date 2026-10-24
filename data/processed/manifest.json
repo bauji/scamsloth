@@ -1,0 +1,122 @@
+{
+  "created": "2026-10-24T03:57:47+00:00",
+  "settings": {
+    "seed": 42,
+    "cap": 2500,
+    "hard_cap": 2800,
+    "lookalike_prefix": 200,
+    "split_ratios": {
+      "train": 0.5,
+      "val": 0.25,
+      "test": 0.25
+    }
+  },
+  "code": {
+    "commit": "01ce615536144c9ceeb6972c0351584455e71578",
+    "uncommitted_changes": false
+  },
+  "input": {
+    "data/processed/scam_call_processed_data.jsonl": "c93d58a869f428171983a87254b845665c04339cc7857d352b1db6d337f52cfe"
+  },
+  "outputs": {
+    "train.jsonl": {
+      "rows": 3278,
+      "labels": {
+        "not_scam": 1639,
+        "scam": 1639
+      },
+      "sources": {
+        "bothbosu-multi-test": 190,
+        "bothbosu-multi-train": 764,
+        "bothbosu-scam": 1598,
+        "kaggle": 121,
+        "robocall": 242,
+        "taskmaster-woz": 363
+      },
+      "synthetic_rows": 2552,
+      "sha256": "c0f441d02aa648f895ace5e4e85287c5abef726605bbdb8260765648e1b2ccf9"
+    },
+    "val.jsonl": {
+      "rows": 364,
+      "labels": {
+        "not_scam": 182,
+        "scam": 182
+      },
+      "sources": {
+        "kaggle": 61,
+        "robocall": 121,
+        "taskmaster-woz": 182
+      },
+      "synthetic_rows": 0,
+      "sha256": "6bd737540dbf9e9770fce8cbe20c93952eb930af8721d1ab60aae70fa0404d2a"
+    },
+    "test.jsonl": {
+      "rows": 366,
+      "labels": {
+        "not_scam": 183,
+        "scam": 183
+      },
+      "sources": {
+        "kaggle": 61,
+        "robocall": 122,
+        "taskmaster-woz": 183
+      },
+      "synthetic_rows": 0,
+      "sha256": "913c33bc4d94d990c9910c94c2ea1d28d4666f1cdce06c41d1fcd6e068158049"
+    },
+    "extra_not_scam.jsonl": {
+      "rows": 4768,
+      "labels": {
+        "not_scam": 4768
+      },
+      "sources": {
+        "taskmaster-woz": 4768
+      },
+      "synthetic_rows": 0,
+      "sha256": "c296a92a19b44154a194125b008197236b2fedf3d7c64ca2d5d0aaf867a99759"
+    }
+  },
+  "raw_sources": {
+    "kaggle": {
+      "url": "https://www.kaggle.com/datasets/rivalcults/youtube-scam-phone-call-transcripts",
+      "version": null,
+      "downloaded": "2026-10-22",
+      "files": {
+        "data/raw/kaggle/FullTranscriptData.csv": "296bd9d533e3606a2cb3b7200d22c7b512f48c35a5cdf84223731a7a68e3a8c1"
+      }
+    },
+    "bothbosu-scam": {
+      "url": "https://huggingface.co/datasets/BothBosu/scam-dialogue",
+      "version": null,
+      "downloaded": "2026-10-22",
+      "files": {
+        "data/raw/bothbosu-scam/data.csv": "fe8a8fa0aa2b8afb0b0a672fb7f9739b323cb6dd12064f786a68c2a1f49a4e0b"
+      }
+    },
+    "bothbosu-multi": {
+      "url": "https://huggingface.co/datasets/BothBosu/multi-agent-scam-conversation",
+      "version": null,
+      "downloaded": "2026-10-22",
+      "files": {
+        "data/raw/bothbosu-multi/agent_conversation_train.csv": "e1c89f4e252162f5a37c01d2ebe9e0cdcad3b22b7bcf01ef730877cef04612db",
+        "data/raw/bothbosu-multi/agent_conversation_test.csv": "93d380c704e47d81028aa55c03a3f28cd6e23498c03cb70aad136a3762c0cc74"
+      }
+    },
+    "robocall": {
+      "url": "https://github.com/wspr-ncsu/robocall-audio-dataset",
+      "version": "git 5aa6f3bfa8563ce8c1c75ebf8a2271e6ff6b4272",
+      "downloaded": "2026-10-22",
+      "files": {
+        "data/raw/robocall/metadata.csv": "8e253a4a652abfa92ac3766feff8da2bef16f45ab3f0f434f212a7aafc3effe5"
+      }
+    },
+    "taskmaster-woz": {
+      "url": "https://github.com/google-research-datasets/Taskmaster",
+      "version": "git d92cb6af3005f1dc09c39e75e7daf4a04905e00b",
+      "downloaded": "2026-10-22",
+      "files": {
+        "data/raw/taskmaster/TM-1-2019/woz-dialogs.json": "cd3bc4e968487315d412c044d30af2bf0a4b33c3ef8b74c589f1e1fa832bf72f"
+      }
+    }
+  }
+}
